@@ -59,9 +59,8 @@ if($userId && isset($user)){
         </div>
         <div class="uk-text-meta">
             <?=$createdAt?>
-            <?php if(isSet($isOwner)){ ?>
-                <span cl
-                ass="owner">
+            <?php if($user['id'] == $userId){ ?>
+                <span class="owner">
                     <a href="/post/delete_process.php?id=<?=$id?>&token=<?=$_SESSION['CSRF_TOKEN']?>"
                         class="uk-link-text" id="delete">Delete</a>
                     <a href="/post/update.php?id=<?=$id?>&token=<?=$_SESSION['CSRF_TOKEN']?>"
