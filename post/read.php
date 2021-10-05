@@ -64,7 +64,7 @@ if($userId && isset($user)){
                     <a href="/post/delete_process.php?id=<?=$id?>&token=<?=$_SESSION['CSRF_TOKEN']?>"
                         class="uk-link-text" id="delete">Delete</a>
                     <a href="/post/update.php?id=<?=$id?>&token=<?=$_SESSION['CSRF_TOKEN']?>"
-                    class="uk-link-text" id="delete">Update</a>
+                    class="uk-link-text" id="update">Update</a>
                 </span>
             <?php } ?>
         </div>
