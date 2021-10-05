@@ -5,7 +5,7 @@ if(array_key_exists('user', $_SESSION)){
     $user = $_SESSION['user'];
     $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
     $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $content = filter_input(INPUT_POST, 'content');22
+    $content = filter_input(INPUT_POST, 'content');
     $token = filter_input(INPUT_POST, 'token');
 
     if(isset($id) && isset($title) && isset($content) && hash_equals($token, $_SESSION['CSRF_TOKEN'])){
